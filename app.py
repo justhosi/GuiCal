@@ -14,8 +14,13 @@ def multiply():
     show_result.config(text=awnser)
 
 def devide():
-    awnser = float(input_1.get()) / float(input_2.get())
-    show_result.config(text=awnser)
+    if int(input_2.get()) == 0:
+
+        show_result.config(text="Error: Devide by zero!", fg="red")
+
+    else:
+        awnser = float(input_1.get()) / float(input_2.get())
+        show_result.config(text=awnser, fg= "white")
 
 windows = Tk()
 windows.title("My App")
@@ -46,10 +51,11 @@ btn_devide.place(x=400, y=110)
 
 result_label = Label(windows, text="Result:")
 result_label.pack()
-result_label.place(x=225, y=150)
-show_result = Label(windows, text="",font=('ubuntu', 28), bg="grey")
+result_label.place(x=250, y=150)
+show_result = Label(windows, text="",font=('ubuntu', 28), bg="grey", width=18)
 show_result.pack()
-show_result.place(x=250, y=170)
+show_result.place(x=70, y=170)
+
 
 
 windows.geometry("500x400")
