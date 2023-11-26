@@ -23,7 +23,7 @@ def devide():
         show_result.config(text=awnser, fg= "white")
 
 windows = Tk()
-windows.title("My App")
+windows.title("Calculator")
 
 Label(windows, text="Insert number 1 here:", bg="white").pack()
 input_1 = Entry(windows)
