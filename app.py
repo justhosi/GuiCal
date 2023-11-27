@@ -1,4 +1,8 @@
 from tkinter import *
+from tkinter import messagebox
+
+def show_error():
+    messagebox.showerror("Devision by zero", "You cannot devide by zero")
 
 
 def add():
@@ -16,7 +20,7 @@ def multiply():
 def devide():
     if int(input_2.get()) == 0:
 
-        show_result.config(text="Error: Devide by zero!", fg="red")
+        show_error()
 
     else:
         awnser = float(input_1.get()) / float(input_2.get())
